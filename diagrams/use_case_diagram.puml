@@ -1,0 +1,39 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Learner Member" as Learner
+actor "Skill Mentor" as Mentor
+actor "Ledger System" as Ledger <<System>>
+actor "External Calendar" as Calendar <<System>>
+
+rectangle "Peer Skill Exchange Platform" {
+  usecase "UC-01: Manage Skill Listings" as UC1
+  usecase "UC-02: Search & Filter Mentors" as UC2
+  usecase "UC-03: Book Mentorship Session" as UC3
+  usecase "UC-04: Verify Credit Balance" as UC4
+  usecase "UC-05: Validate Session Completion" as UC5
+  usecase "UC-06: Transfer Time Credit" as UC6
+  usecase "UC-07: Submit Feedback & Rating" as UC7
+  usecase "UC-08: Sync with External Calendar" as UC8
+  usecase "UC-09: Raise Session Dispute" as UC9
+}
+
+Mentor --> UC1
+Learner --> UC2
+Learner --> UC3
+Learner --> UC5
+Mentor --> UC5
+
+UC3 .> UC4 : <<include>>
+UC5 .> UC6 : <<include>>
+
+UC8 .> UC3 : <<extend>>
+UC7 .> UC5 : <<extend>>
+UC9 .> UC5 : <<extend>>
+
+UC4 --> Ledger
+UC6 --> Ledger
+UC8 --> Calendar
+
+@enduml
