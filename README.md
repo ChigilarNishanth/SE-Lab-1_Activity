@@ -19,49 +19,49 @@ PES University - Dept. of CSE - Lab 1: Requirements Engineering &amp; UML Use-Ca
 
 ```mermaid
 flowchart LR
-    %% Primary Human Actors (Left Side)
-    subgraph Primary_Actors ["Actors"]
-        Learner["👤 Learner Member"]
-        Mentor["👤 Skill Mentor"]
-    end
+    %% Primary Human Actors (Left)
+    Learner["👤 Learner Member"]
+    Mentor["👤 Skill Mentor"]
 
-    %% System Boundary
+    %% Platform Boundary
     subgraph Platform ["Peer Skill Exchange Platform"]
         direction TB
+        
+        %% Core Use Cases
         UC1(["UC-01: Manage Skill Listings"])
         UC2(["UC-02: Search & Filter Mentors"])
         UC3(["UC-03: Book Mentorship Session"])
-        UC4(["UC-04: Verify Credit Balance"])
         UC5(["UC-05: Validate Session Completion"])
+        
+        %% Supporting / Included / Extended Use Cases
+        UC4(["UC-04: Verify Credit Balance"])
         UC6(["UC-06: Transfer Time Credit"])
         UC7(["UC-07: Submit Feedback & Rating"])
         UC8(["UC-08: Sync with External Calendar"])
         UC9(["UC-09: Raise Session Dispute"])
     end
 
-    %% Secondary System Actors (Right Side)
-    subgraph Secondary_Actors ["External Systems"]
-        Ledger[("🗄️ Ledger System")]
-        Calendar["📅 Calendar Service"]
-    end
+    %% External Systems (Right)
+    Ledger[("🗄️ Ledger System")]
+    Calendar["📅 Calendar Service"]
 
-    %% Actor to Use Case Associations (Solid lines)
+    %% Actor Connections (Straight into Core Use Cases)
+    Mentor --- UC1
     Learner --- UC2
     Learner --- UC3
     Learner --- UC5
-    Mentor --- UC1
     Mentor --- UC5
 
-    %% <<include>> Relationships (Base points to Included)
+    %% Include Relationships
     UC3 -. "&laquo;include&raquo;" .-> UC4
     UC5 -. "&laquo;include&raquo;" .-> UC6
 
-    %% <<extend>> Relationships (Extension points to Base)
-    UC8 -. "&laquo;extend&raquo;" .-> UC3
-    UC7 -. "&laquo;extend&raquo;" .-> UC5
-    UC9 -. "&laquo;extend&raquo;" .-> UC5
+    %% Extend Relationships
+    UC3 -. "&laquo;extend&raquo;" .-> UC8
+    UC5 -. "&laquo;extend&raquo;" .-> UC7
+    UC5 -. "&laquo;extend&raquo;" .-> UC9
 
-    %% System Actor Connections
+    %% External System Connections
     UC4 --- Ledger
     UC6 --- Ledger
     UC8 --- Calendar
