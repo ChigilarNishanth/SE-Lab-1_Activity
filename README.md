@@ -115,7 +115,24 @@ flowchart LR
 5. System notifies Skill Mentor of booking request.
 6. Skill Mentor accepts the booking request.
 7. System triggers `<<extend>> UC-08: Sync with External Calendar` to send `.ics` calendar invites.
-8. System generates virtual meeting room link and displays confirmation.
+
+---
+
+## Lab 2: Agile Project Management with Jira
+* **Student Name:** Nishanth T Chigilar
+* **SRN:** PES1UG24CS302
+* **Problem Statement:** #56 — Peer Skill Exchange & Mentorship Network
+
+### Deliverables
+* 📄 **Scrum Simulation Report:** [Lab-2/Scrum.PDF](Lab-2/Scrum.PDF)
+* 📄 **Kanban Board & Subtasks Report:** [Lab-2/Kanban.PDF](Lab-2/Kanban.PDF)
+* 📄 **Bug Tracking & QA Report:** [Lab-2/BugReport.PDF](Lab-2/BugReport.PDF)
+
+### Configured Jira Projects
+1. **Scrum Space (`Scrum_Project-Nishanth T Chigilar_PES1UG24CS302-BPS#56` / Key: `SPS56`):** Backlog with 3 Epics, 7 user stories estimated with Fibonacci story points (32 total points), 16 points completed in Sprint 1, and Burndown Chart.
+2. **Kanban Space (`Kanban_BPS#56` / Key: `KBPS56`):** Continuous flow tracking 5 FRs and 2 NFRs across To Do, In Progress, and Done, with granular child subtasks.
+3. **Bug Tracker Space (`BugTracker_BPS#56` / Key: `BT56`):** Defect management workflow tracking concurrency race conditions, calendar timezone offsets, and input boundary validation bypasses.
+9. System generates virtual meeting room link and displays confirmation.
 
 ### Alternate Flows
 * **AF-1: Insufficient Time Credits (Step 4):** Ledger detects 0 credits $\rightarrow$ Booking is blocked $\rightarrow$ System displays error message and prompts user to earn credits by mentoring.
