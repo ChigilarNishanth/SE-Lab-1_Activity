@@ -1,0 +1,45 @@
+@startuml
+skinparam componentStyle uml2
+skinparam backgroundColor #FFFFFF
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+
+title Peer Skill Exchange & Mentorship Network (BPS #56) - Layered Architecture\nStudent: Nishanth T Chigilar | SRN: PES1UG24CS302
+
+package "Presentation Layer" {
+  [User Interface Component\n<<component>>] as UI
+}
+
+interface "Search & Discovery API" as IF_Search
+interface "Session Booking & Escrow API" as IF_Booking
+
+package "Business Layer" {
+  [Mentor Discovery Component\n<<component>>] as SearchComp
+  [Session Booking & Escrow Component\n<<component>>] as BookingComp
+  [Time-Banking Ledger Component\n<<component>>] as LedgerComp
+  interface "Ledger Transaction API" as IF_Ledger
+}
+
+interface "Database Interface\n(SQL / JDBC)" as IF_DB
+
+package "Data Layer" {
+  [Database Component\n<<component>>] as DB
+}
+
+' Connections
+UI -down-> IF_Search : <<use>>
+IF_Search -down- SearchComp
+
+UI -down-> IF_Booking : <<use>>
+IF_Booking -down- BookingComp
+
+BookingComp -right-> IF_Ledger : <<use>>
+IF_Ledger -right- LedgerComp
+
+SearchComp -down-> IF_DB : <<use>>
+BookingComp -down-> IF_DB : <<use>>
+LedgerComp -down-> IF_DB : <<use>>
+IF_DB -down- DB
+
+@enduml

@@ -137,3 +137,20 @@ flowchart LR
 ### Alternate Flows
 * **AF-1: Insufficient Time Credits (Step 4):** Ledger detects 0 credits $\rightarrow$ Booking is blocked $\rightarrow$ System displays error message and prompts user to earn credits by mentoring.
 * **AF-2: Mentor Rejection / Request Expiry (Step 6):** Mentor declines or request expires after 24h $\rightarrow$ System unlocks slot $\rightarrow$ Held escrow credit is returned to learner.
+
+---
+
+## Lab 3: Component Modelling & Architectural Pattern Selection
+* **Student Name:** Nishanth T Chigilar
+* **SRN:** PES1UG24CS302
+* **Problem Statement:** #56 — Peer Skill Exchange & Mentorship Network
+
+### 📂 Lab 3 Deliverables
+* 📄 **Architectural Justification Document:** [`Lab-3/Lab3_Architecture.pdf`](Lab-3/Lab3_Architecture.pdf)
+* 🎨 **UML Component Diagram (Image):** [`Lab-3/Component_Diagram.png`](Lab-3/Component_Diagram.png)
+* 📐 **PlantUML Diagram Source:** [`Lab-3/component_diagram.puml`](Lab-3/component_diagram.puml)
+
+### 🧩 System Design Summary
+* **Selected Architecture:** Layered Architecture (Presentation, Business, Data Layers)
+* **Identified Components (5):** User Interface, Mentor Discovery, Session Booking & Escrow, Time-Banking Ledger, Database
+* **Configured Interfaces (4):** Search & Discovery API, Session Booking & Escrow API, Ledger Transaction API, Database Interface
