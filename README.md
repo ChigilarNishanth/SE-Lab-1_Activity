@@ -159,7 +159,7 @@ flowchart LR
 ## Lab 4: Vibe Coding
 * **Student Name:** Nishanth T Chigilar
 * **SRN:** PES1UG24CS302
-* **Problem Statement:** #56 — Peer Skill Exchange & Mentorship Network
+* **Problem Statement:** #56_tug_of_war
 
 ### Project Overview
 Lab 4 focuses on a two-player local multiplayer **Tug of War** game built with Python and Pygame. The project was **debugged, modularized, and enhanced using Vibe Coding** techniques.
@@ -200,24 +200,6 @@ Lab-4/56_tug_of_war/
 │   └── rope.py
 ├── main.py
 └── README.md
-```
-
-### Relevant File Descriptions
-| Path | Description |
-|---|---|
-| `Lab-4/56_tug_of_war/main.py` | Expected entry point that starts the game |
-| `Lab-4/56_tug_of_war/game/game_engine.py` | Expected main game loop, timer, rendering, and event handling |
-| `Lab-4/56_tug_of_war/game/player.py` | Expected player input behavior |
-| `Lab-4/56_tug_of_war/game/rope.py` | Expected rope movement, clamping, and win checks |
-| [`Lab-4/56_tug_of_war/`](Lab-4/56_tug_of_war/) | Lab 4 project directory present in this repository |
-
-### Lab 4 Submission Structure
-```text
-Lab-4/
-├── 56_tug_of_war/
-├── video_before.mp4
-├── video_after.mp4
-└── chat_history.pdf
 ```
 
 ### Required Submission Files
@@ -274,29 +256,6 @@ python3 main.py
 - Added instant match restart flow using `R`.
 - Improved visual clarity for boundaries and status text.
 
-### Troubleshooting
-- **`ModuleNotFoundError: No module named 'pygame'`**
-  - Run: `pip install pygame`
-- **Python command not found**
-  - Try: `python3 main.py`
-- **Game window closes immediately**
-  - Run from terminal and verify required project files exist.
-- **Keyboard input not working**
-  - Ensure the Pygame window is focused.
-
-### Educational Purpose
-This lab demonstrates game-loop design, event handling, input processing, modularization, debugging, and AI-assisted iterative software improvement with Vibe Coding.
-
-### Future Improvements
-- Sound effects and background music
-- Configurable player names and controls
-- Difficulty levels and AI opponent
-- Improved graphics and animation
-- Multi-round scoring
-- Pause/resume and settings menu
-- Online multiplayer support
-
-### License
 This Lab 4 work is intended for educational use.
 
 ### Author
