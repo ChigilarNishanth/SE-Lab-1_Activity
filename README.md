@@ -154,3 +154,152 @@ flowchart LR
 * **Selected Architecture:** Layered Architecture (Presentation, Business, Data Layers)
 * **Identified Components (5):** User Interface, Mentor Discovery, Session Booking & Escrow, Time-Banking Ledger, Database
 * **Configured Interfaces (4):** Search & Discovery API, Session Booking & Escrow API, Ledger Transaction API, Database Interface
+---
+
+## Lab 4: Vibe Coding
+* **Student Name:** Nishanth T Chigilar
+* **SRN:** PES1UG24CS302
+* **Problem Statement:** #56 — Peer Skill Exchange & Mentorship Network
+
+### Project Overview
+Lab 4 focuses on a two-player local multiplayer **Tug of War** game built with Python and Pygame. The project was **debugged, modularized, and enhanced using Vibe Coding** techniques.
+
+### Main Features
+- Two-player local multiplayer gameplay.
+- Real-time keyboard controls.
+- 30-second countdown timer.
+- Boundary-based winner detection.
+- Timeout winner decision based on knot position.
+- Tie result when the knot is exactly centered at timeout.
+- Restart support without closing the game.
+
+### Controls
+| Player / Action | Key | Description |
+|---|:---:|---|
+| Player 1 Pull | `A` | Pulls the knot toward the left |
+| Player 2 Pull | `L` | Pulls the knot toward the right |
+| Restart Match | `R` | Resets rope, timer, and match state |
+| Quit Game | Close Window | Closes the Pygame window |
+
+### Match Behavior
+- **Boundary Win:**
+  - Player 1 wins when the knot crosses the left boundary.
+  - Player 2 wins when the knot crosses the right boundary.
+- **Timer Rule:** Each match lasts **30 seconds**.
+- **Timeout Rule:** If no boundary is crossed, the player closest to their side wins.
+- **Tie Rule:** If the knot is exactly centered when the timer ends, the match is a tie.
+
+### Project Structure
+Expected Tug of War source structure:
+
+```text
+Lab-4/56_tug_of_war/
+├── game/
+│   ├── game_engine.py
+│   ├── player.py
+│   └── rope.py
+├── main.py
+└── README.md
+```
+
+### Relevant File Descriptions
+| Path | Description |
+|---|---|
+| `Lab-4/56_tug_of_war/main.py` | Expected entry point that starts the game |
+| `Lab-4/56_tug_of_war/game/game_engine.py` | Expected main game loop, timer, rendering, and event handling |
+| `Lab-4/56_tug_of_war/game/player.py` | Expected player input behavior |
+| `Lab-4/56_tug_of_war/game/rope.py` | Expected rope movement, clamping, and win checks |
+| [`Lab-4/56_tug_of_war/`](Lab-4/56_tug_of_war/) | Lab 4 project directory present in this repository |
+
+### Lab 4 Submission Structure
+```text
+Lab-4/
+├── 56_tug_of_war/
+├── video_before.mp4
+├── video_after.mp4
+└── chat_history.pdf
+```
+
+### Required Submission Files
+| File | Description |
+|---|---|
+| [`Lab-4/56_tug_of_war/`](Lab-4/56_tug_of_war/) | Tug of War project directory (present) |
+| [`Lab-4/video_before.mp4`](Lab-4/video_before.mp4) | Recording of original/broken game state |
+| [`Lab-4/video_after.mp4`](Lab-4/video_after.mp4) | Recording of corrected/working game state |
+| [`Lab-4/chat_history.pdf`](Lab-4/chat_history.pdf) | Exported Vibe Coding chat history |
+
+### Technical Requirements
+- Python 3.8 or newer
+- Pygame 2.0 or newer
+- Keyboard and display capable of running a Pygame application
+
+### Installation
+1. Open a terminal in the Tug of War project root:
+   - `Lab-4/56_tug_of_war/`
+2. (Recommended) Create and activate a virtual environment.
+3. Install dependencies:
+
+```bash
+pip install pygame
+```
+
+### Running the Game
+From `Lab-4/56_tug_of_war/`, run:
+
+```bash
+python main.py
+```
+
+If needed, use:
+
+```bash
+python3 main.py
+```
+
+### Gameplay Steps
+1. Start the game.
+2. Player 1 presses `A` repeatedly to pull left.
+3. Player 2 presses `L` repeatedly to pull right.
+4. Monitor the 30-second timer.
+5. Cross your boundary first to win.
+6. Press `R` anytime to restart.
+
+### Bug Fixes and Improvements
+- Corrected keyboard event handling reliability.
+- Improved rope movement direction and responsiveness.
+- Added boundary clamping for playable-area safety.
+- Added a 30-second countdown timer with HUD display.
+- Added immediate boundary-cross winner detection.
+- Added timeout winner logic and explicit tie handling.
+- Added instant match restart flow using `R`.
+- Improved visual clarity for boundaries and status text.
+
+### Troubleshooting
+- **`ModuleNotFoundError: No module named 'pygame'`**
+  - Run: `pip install pygame`
+- **Python command not found**
+  - Try: `python3 main.py`
+- **Game window closes immediately**
+  - Run from terminal and verify required project files exist.
+- **Keyboard input not working**
+  - Ensure the Pygame window is focused.
+
+### Educational Purpose
+This lab demonstrates game-loop design, event handling, input processing, modularization, debugging, and AI-assisted iterative software improvement with Vibe Coding.
+
+### Future Improvements
+- Sound effects and background music
+- Configurable player names and controls
+- Difficulty levels and AI opponent
+- Improved graphics and animation
+- Multi-round scoring
+- Pause/resume and settings menu
+- Online multiplayer support
+
+### License
+This Lab 4 work is intended for educational use.
+
+### Author
+**Chigilar Nishanth**
+
+Reference project: https://github.com/ChigilarNishanth/56_tug_of_war
