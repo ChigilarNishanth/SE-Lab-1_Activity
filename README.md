@@ -154,3 +154,15 @@ flowchart LR
 * **Selected Architecture:** Layered Architecture (Presentation, Business, Data Layers)
 * **Identified Components (5):** User Interface, Mentor Discovery, Session Booking & Escrow, Time-Banking Ledger, Database
 * **Configured Interfaces (4):** Search & Discovery API, Session Booking & Escrow API, Ledger Transaction API, Database Interface
+---
+
+## Lab 4: AI-Assisted Software Engineering
+* **Student Name:** Nishanth T Chigilar
+* **SRN:** PES1UG24CS302
+* **Problem Statement:** #56 — Peer Skill Exchange & Mentorship Network
+
+### Lab 4 Deliverables
+* 🧩 **Lab 4 Working Artifact/Source:** [`Lab-4/56_tug_of_war`](Lab-4/56_tug_of_war)
+* 💬 **AI Chat History:** [`Lab-4/chat_history.pdf`](Lab-4/chat_history.pdf)
+* 🎥 **Demonstration Video (Before):** [`Lab-4/video_before.mp4`](Lab-4/video_before.mp4)
+* 🎥 **Demonstration Video (After):** [`Lab-4/video_after.mp4`](Lab-4/video_after.mp4)
