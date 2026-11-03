@@ -23,7 +23,7 @@ Line coverage measures whether every executable line of code was executed during
 coverage run -m pytest CodeCoverageTest_56_course_registration.py
 coverage report -m
 Report ResultsMetricResultTotal Statements40Covered Statements40Line Coverage100%AnalysisAll 40 executable statements were covered by the automated test cases. Every line in course_registration.py was executed during line coverage testing.
-
+```
 ---
 
 ## 3. Branch Coverage Analysis
